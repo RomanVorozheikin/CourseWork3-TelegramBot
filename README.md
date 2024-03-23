@@ -4,6 +4,6 @@
 
 Технологии, используемые в проекте: Spring Framework, Spring Boot, Git, PostgreSQL, Hibernate,
 
-Ссылка на репозиторий проекта:
+Ссылка на репозиторий проекта: https://github.com/RomanVorozheikin/CourseWork3-TelegramBot
 
 Проект представляет собой open-source, и мы рады любой обратной связи и вкладу в его развитие.
