@@ -6,4 +6,6 @@
 
 Ссылка на репозиторий проекта: https://github.com/RomanVorozheikin/CourseWork3-TelegramBot
 
+Демонстрация работы приложения доступна по ссылке: https://www.youtube.com/shorts/BzUgDtpTDak
+
 Проект представляет собой open-source, и мы рады любой обратной связи и вкладу в его развитие.
