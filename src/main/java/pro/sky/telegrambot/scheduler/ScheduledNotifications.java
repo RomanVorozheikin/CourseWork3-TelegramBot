@@ -5,7 +5,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import pro.sky.telegrambot.model.Notifications;
 import pro.sky.telegrambot.repository.NotificationsRepository;
-import pro.sky.telegrambot.sender.NotificationSender;
+import pro.sky.telegrambot.service.NotificationService;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -14,12 +14,12 @@ import java.util.List;
 @Component
 public class ScheduledNotifications {
     private final NotificationsRepository notificationsRepository;
-    private final NotificationSender notificationSender;
 
+    private final NotificationService notificationService;
     @Autowired
-    public ScheduledNotifications(NotificationsRepository notificationsRepository, NotificationSender notificationSender) {
+    public ScheduledNotifications(NotificationsRepository notificationsRepository, NotificationService notificationService) {
         this.notificationsRepository = notificationsRepository;
-        this.notificationSender = notificationSender;
+        this.notificationService = notificationService;
     }
 
     @Scheduled(cron = "0 0/1 * * * *")
@@ -29,7 +29,7 @@ public class ScheduledNotifications {
         List<Notifications> notifications = notificationsRepository.findByNotificationDatetime(now);
 
         for (Notifications notification : notifications) {
-            notificationSender.sendNotification(Long.toString(notification.getChatId()), notification.getNotificationText());
+            notificationService.searchAndSend(notification.getChatId(),notification.getNotificationText());
         }
         notificationsRepository.deleteAll(notifications);
     }
