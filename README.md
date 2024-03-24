@@ -2,7 +2,7 @@
 
 Описание проекта: Данный бот разработан для удобного управления задачами и позволяет устанавливать напоминания. Пользователи могут создавать новые уведомления для себя. Просто напишите <b>/start<b>
 
-Технологии, используемые в проекте: <ul>Spring Framework, Spring Boot, Git, PostgreSQL, Hibernate,
+Технологии, используемые в проекте: <ul> <li>Spring Framework</li> Spring Boot, Git, PostgreSQL, Hibernate </ul>
 
 Ссылка на репозиторий проекта: https://github.com/RomanVorozheikin/CourseWork3-TelegramBot
 
